@@ -46,14 +46,15 @@ export class AppComponent {
       // subscriber.complete()
     })
 
+//    todo : easiest method to handling observables
 /*    text$.subscribe(x => {
         console.log(x)
         console.log('from inside of the subscribe method')
       }
     );*/
 
-    //another way of executing observable from consumer method
-    //1) consumer method can be called as many as possible.
+    //todo: Angular.io recommended way of handling/executing observables from Observers interface
+    //1) consumer method can be called as many times as possible.
 
     text$.subscribe({
       next(x) {
