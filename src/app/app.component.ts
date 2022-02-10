@@ -43,21 +43,22 @@ export class AppComponent {
       }, 1000);
 
       //  subscriber.complete() - bruteforce method to complete an event
-      subscriber.complete()
+      // subscriber.complete()
     })
 
-    text$.subscribe(x => {
+/*    text$.subscribe(x => {
         console.log(x)
         console.log('from inside of the subscribe method')
       }
-    );
-
+    );*/
 
     //another way of executing observable from consumer method
     //1) consumer method can be called as many as possible.
+
     text$.subscribe({
       next(x) {
-        console.log('\n\n another way x=' + x)
+        console.log('another way of using subscriber')
+        console.log(' value of x is =' + x+'\n\n')
       },
       error(err) {
         console.log('something wrong = '+err)
